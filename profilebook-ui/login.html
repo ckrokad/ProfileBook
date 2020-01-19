@@ -1,0 +1,107 @@
+<html>
+
+<head>
+    <title>Login-Register</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <script src="js/authentication.js"></script>
+    <script src="js/login.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.collapsible');
+            var instances = M.Collapsible.init(elems, options);
+        });
+    </script>
+</head>
+
+<body onload="loginAuth()">
+    <nav>
+        <div class="nav-wrapper blue-grey lighten-2">
+            <p style="text-align: left;padding-left:2%;">ProfileBook</p>
+        </div>
+    </nav>
+    <main class="row container">
+        <div class="row">
+            <div class="col s12 offset-s3">
+                <form class="col s6">
+                    <h3 class="center-align">Login</h3>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="username" type="text" class="validate" autocomplete="off" required>
+                            <label for="username">Username</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="password" type="password" class="validate" autocomplete="off" required>
+                            <label for="password">Password</label>
+                        </div>
+                    </div>
+                    <a class="waves-effect waves-light btn blue-grey lighten-2" id="login_btn" onclick="login()">Login</a>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s6 offset-s3">
+
+                <form class="col s12">
+                    <h3 class="center-align">Register</h3>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="rusername" type="text" class="validate" autocomplete="off" required>
+                            <label for="rusername">Username</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="rfullname" type="text" class="validate" autocomplete="off" required>
+                            <label for="rfullname">Full Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="remail" type="text" class="validate" autocomplete="off" required>
+                            <label for="remail">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="raddress" type="text" class="validate" autocomplete="off">
+                            <label for="raddress">Address</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="rcoccu" type="text" class="validate" autocomplete="off">
+                            <label for="rcoccu">Current Occupation</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="rpassword" type="password" class="validate" autocomplete="off" required>
+                            <label for="rpassword">Password</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="rcpassword" type="password" class="validate" autocomplete="off">
+                            <label for="rcpassword">Confirm Password</label>
+                        </div>
+                    </div>
+                    <a class="waves-effect waves-light btn blue-grey lighten-2" id="register_btn" onclick="register()">Register</a>
+                </form>
+
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
